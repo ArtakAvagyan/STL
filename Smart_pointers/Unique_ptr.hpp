@@ -32,7 +32,11 @@ Unique_ptr<T,deletor>::Unique_ptr(Unique_ptr<T,deletor>& other)
 template<typename T,typename deletor>
 void Unique_ptr<T,deletor>::clear()
 {
-	if(del != nullptr){del(ptr);return;}
+	if (del != nullptr)
+	{
+		del(ptr);
+		return;
+	}
 	delete ptr;
 }
 
@@ -111,5 +115,3 @@ bool Unique_ptr<T,deletor>::operator<(const Unique_ptr<T,deletor>& other)const
 }
 
 }/*end of STL*/
-
-
