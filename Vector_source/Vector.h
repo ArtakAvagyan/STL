@@ -34,7 +34,6 @@ namespace STL
 			public:
 				T& at(size_t)const;
 				size_t size()const;
-				//	size_t max_size();
 				size_t capacity()const;
 				void shrint_to_fit();
 				void swap(Vector<T>&);
